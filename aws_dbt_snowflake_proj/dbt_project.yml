@@ -1,0 +1,27 @@
+name: 'aws_dbt_snowflake_proj'
+version: '1.0.0'
+
+profile: 'aws_dbt_snowflake_proj'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  aws_dbt_snowflake_proj: # 2 spaces. MUST match the 'name:' at the top.
+    bronze:               # 4 spaces. Matches folder: models/bronze/
+      +materialized: table
+      +schema: bronze
+    silver:               # 4 spaces. Matches folder: models/silver/
+      +materialized: table
+      +schema: silver
+    gold:               # 4 spaces. Matches folder: models/silver/
+      +materialized: table
+      +schema: gold
