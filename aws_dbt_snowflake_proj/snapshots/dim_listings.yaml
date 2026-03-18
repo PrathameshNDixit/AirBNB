@@ -1,0 +1,11 @@
+snapshots:
+  - name: dim_listings
+    relation: ref('silver_listings')
+    config:
+      schema: gold
+      database: AIRBNB
+      unique_key: listing_id
+      strategy: timestamp
+      # Using the custom alias from your silver_hosts model
+      updated_at: listings_created_at
+      dbt_valid_to_current: "to_date('9999-12-31')"

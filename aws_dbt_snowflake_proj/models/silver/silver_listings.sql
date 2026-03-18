@@ -1,1 +1,1 @@
-select *,{{tag('price_per_night')}} as price_per_night_flag from {{ ref('bronze_listings') }}
+select *,{{tag('price_per_night')}} as price_per_night_flag,created_at as listings_created_at from {{ ref('bronze_listings') }}

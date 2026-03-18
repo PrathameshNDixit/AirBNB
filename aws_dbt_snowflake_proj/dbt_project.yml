@@ -25,3 +25,5 @@ models:
     gold:               # 4 spaces. Matches folder: models/silver/
       +materialized: table
       +schema: gold
+      ephemeral:
+        +materialized: ephemeral

@@ -14,7 +14,7 @@
         "join_on": "b.listing_id = l.listing_id",
         "columns": [
             "property_type", "room_type", "city", 
-            "price_per_night", "price_per_night_flag"
+            "price_per_night", "price_per_night_flag","listings_created_at"
         ]
     },
     {
@@ -22,7 +22,7 @@
         "alias": "h",
         "join_on": "l.host_id = h.host_id",
         "columns": [
-            "host_name_cleaned", "is_superhost", "response_rate_quality"
+            "host_id","host_name_cleaned", "is_superhost", "response_rate_quality","host_created_at"
         ]
     }
 ] %}
